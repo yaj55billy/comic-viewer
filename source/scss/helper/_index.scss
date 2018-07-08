@@ -1,0 +1,106 @@
+
+.comic{
+    @include clearfix;
+    margin-bottom: 24px;
+    > *{
+        width: 50%;
+        float: left;
+    }
+    .comic-pic{
+        border: 4px solid #000000;
+    }
+    .comic-main-title{
+        background: $black;
+        padding: 8px 20px;
+        h1.title{
+            margin-bottom: 0;
+        }
+    }
+
+    .comic-main-info{
+        padding: 16px 0 0 20px;
+    }
+
+    .comic-main-info li{
+        @include clearfix;
+        margin-bottom: 8px;
+
+        .info-name{
+            float: left;
+            width: 30%;
+            margin-bottom: 0;
+        }
+
+        .info-ans{
+            float: left;
+            width: 70%;
+            margin-bottom: 0;
+        }
+
+        .info-ans span{
+            margin-right: 5px;
+        }
+    }
+
+    .comic-main-info li:nth-last-child(1){
+        .info-name{
+            float: none;
+            width: 100%;
+            margin-bottom: 8px;
+        }
+
+        .info-ans{
+            float: none;
+            width: 100%;
+            margin-bottom: 0;
+        }
+    } 
+}
+
+.chapters{
+    margin-bottom: 24px;
+
+    .chapters-title{
+        background-color: $black;
+        padding: 8px 20px;
+        display: inline-block;
+        letter-spacing: 1px;
+
+        h2.title{
+            margin-bottom: 0px;
+        }
+    }
+
+    .chapters-list{
+        border: 4px solid #000000;
+        padding: 18px 0 8px;
+
+        li{
+            padding: 8px 24px 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            &:hover{
+                background-color: $black;
+            }
+            &:hover h4.subtitle{
+                color: #fff;
+            }
+
+            h4.subtitle{
+                letter-spacing: 1px;
+                margin-bottom: 0;
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            span{
+                display: inline-block;
+                vertical-align: middle;
+                padding: 2px 12px;
+                background-color: $color-green;
+                letter-spacing: 1px;
+                margin-left: 6px;
+            }
+        }
+    }
+}
